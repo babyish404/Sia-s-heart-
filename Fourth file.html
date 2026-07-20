@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Last Question ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#5a0000,#8b0000,#c2185b);
+overflow:hidden;
+}
+
+/* Floating hearts */
+.heart{
+position:absolute;
+color:#ffb6c1;
+font-size:25px;
+animation:float 8s linear infinite;
+opacity:.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+max-width:650px;
+box-shadow:0 0 25px rgba(0,0,0,.3);
+animation:fadeIn 1s ease;
+}
+
+h1{
+color:#8b0000;
+margin-bottom:15px;
+}
+
+h2{
+margin-bottom:30px;
+color:#444;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:#8b0000;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.message{
+margin-top:25px;
+font-size:22px;
+color:#8b0000;
+font-weight:bold;
+}
+
+.next{
+margin-top:25px;
+display:none;
+font-size:20px;
+font-weight:bold;
+color:#8b0000;
+cursor:pointer;
+animation:pulse 1.4s infinite;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:scale(.9);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes pulse{
+0%{opacity:.5;}
+50%{opacity:1;}
+100%{opacity:.5;}
+}
+</style>
+</head>
+
+<body>
+
+<span class="heart" style="left:10%;">❤️</span>
+<span class="heart" style="left:25%;animation-delay:2s;">🤍</span>
+<span class="heart" style="left:45%;animation-delay:1s;">❤️</span>
+<span class="heart" style="left:65%;animation-delay:3s;">💕</span>
+<span class="heart" style="left:82%;animation-delay:4s;">🤍</span>
+
+<div class="card">
+
+<h1>Salihu Bello Ishaq 🤍</h1>
+
+<h2>Will you be my Prince Charming?</h2>
+
+<button onclick="stepOne()">Yes... or Yes? ❤️</button>
+
+<div class="message" id="text"></div>
+
+<div class="next" id="next" onclick="window.location.href='page6.html'">
+Tap to Continue ➜
+</div>
+
+</div>
+
+<script>
+let step=0;
+
+function stepOne(){
+
+step++;
+
+const text=document.getElementById("text");
+const next=document.getElementById("next");
+
+if(step==1){
+text.innerHTML="Are you sure? 🥺";
+}
+
+else if(step==2){
+text.innerHTML="Are you really sure? 🤍";
+}
+
+else if(step>=3){
+text.innerHTML="I knew you'd say yes. ❤️";
+next.style.display="block";
+}
+}
+</script>
+
+</body>
+</html>

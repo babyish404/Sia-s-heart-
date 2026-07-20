@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aisha's Heart 🤍</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(180deg,#4b0000,#8b0000);
+font-family:Georgia,serif;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+.screen{
+text-align:center;
+padding:30px;
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+p{
+font-size:20px;
+}
+
+.mail{
+font-size:120px;
+cursor:pointer;
+margin-top:40px;
+animation:shake 0.7s infinite;
+transition:.3s;
+}
+
+.mail:hover{
+transform:scale(1.08);
+}
+
+@keyframes shake{
+0%{transform:rotate(0);}
+20%{transform:rotate(-8deg);}
+40%{transform:rotate(8deg);}
+60%{transform:rotate(-8deg);}
+80%{transform:rotate(8deg);}
+100%{transform:rotate(0);}
+}
+
+.letter{
+display:none;
+background:white;
+color:#333;
+max-width:800px;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+line-height:2;
+font-size:19px;
+overflow:auto;
+max-height:90vh;
+}
+
+.paper-title{
+text-align:center;
+color:#8b0000;
+margin-bottom:30px;
+}
+
+button{
+margin-top:35px;
+padding:15px 40px;
+border:none;
+border-radius:50px;
+background:#8b0000;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#650000;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="screen" id="home">
+
+<h2>Hiii Saleem 🤍</h2>
+
+<h1>Aisha's Heart</h1>
+
+<p>You have a mail.</p>
+
+<div class="mail" onclick="openLetter()">
+💌
+</div>
+
+</div>
+
+<div class="letter" id="letter">
+
+<h1 class="paper-title">
+The First Poem I Wrote For You 🤍
+</h1>
+
+<p>
+
+I was on my own, enjoying the quiet life of solitude.
+
+<br><br>
+
+I swore to myself I'd never give my heart out again…
+
+<br><br>
+
+Then you came along, and suddenly, solitude sounded like something I wouldn't mind leaving behind.
+
+<br><br>
+
+You somehow disarmed me before I even knew it, and when I finally did, it was already too late—I was yours.
+
+<br><br>
+
+You painted my black-and-white world with colors I knew existed, but never bothered to explore.
+
+<br><br>
+
+The world had always been there… but you made me want to live in it fully.
+
+<br><br>
+
+You became the reason behind my smile, the calm in my chaotic mind, my sun on a rainy day, my muse, an absolute work of art.
+
+<br><br>
+
+You're my quiet place in a noisy world, my favorite thought before sleep, my heartbeat in the calm, my laughter on a gloomy day, my everything I didn't know I needed, my safe place, my home, my peace, my favorite chapter in the story of me.
+
+<br><br>
+
+And though this love came quietly, without warning, it has grown into the happiest part of me, soft, deep, and endless—like a song I never want to stop singing.
+
+<br><br>
+
+With you, I've found the colors, the warmth, the light, and I wouldn't trade a single moment of this for anything in the world.
+
+<br><br>
+
+<b>
+This is the first poem I ever wrote for you, and I mean every single word of it.
+</b>
+
+</p>
+
+<center>
+
+<button onclick="nextPage()">
+Tap to Continue 🤍
+</button>
+
+</center>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("home").style.display="none";
+
+document.getElementById("letter").style.display="block";
+
+}
+
+function nextPage(){
+
+alert("The next page will go here ❤️");
+
+}
+
+</script>
+
+</body>
+</html>
